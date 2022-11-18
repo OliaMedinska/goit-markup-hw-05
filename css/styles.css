@@ -90,15 +90,19 @@ ul {
 }
 
 /* header */
-header{
+.header{
+    position: fixed;
     padding-top: 0px;
     padding-bottom: 0px;
     border-bottom: 1px solid var(--header-bording-color);
+    background-color: var(--second-text-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
-.container-header{
-    align-items: center;
-}
+/*decoration*/
 
  /* logo header */
 .decoration {
@@ -354,6 +358,7 @@ fill:var(--second-text-color);
 .section-hero{
 padding-left: 15px;
 padding-right: 15px;
+margin-top: 80px;
 }
 
 .hero{
@@ -480,7 +485,38 @@ margin-bottom: 10px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+    position: relative;
 }
+
+.photos::after{
+    content: "ДЕСКТОПНІ ДОДАТКИ";
+    color: var(--second-text-color);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    align-items: center;
+    padding: 27px 107px;
+
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0px;
+}
+
+.photos.photos-second::after{
+    content: "МОБІЛЬНІ ДОДАТКИ";
+}
+
+.photos.photos-third::after{
+    content: "ДИЗАЙНЕРСЬКІ РІШЕННЯ";
+    padding: 27px 95px;
+}
+
+
 ul.list{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -611,6 +647,19 @@ fill:var(--second-text-color);
     margin-bottom: 50px;
 }
 
+.header-decoration{
+    position: relative;
+}
+.header-decoration::after{
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+}
+
 .clients-logoes{
     display: flex;
     flex-direction: row;
@@ -646,6 +695,7 @@ fill:var(--second-text-color);
 .section-secondary{
     padding-top: 94px;
     padding-bottom: 94px;
+    margin-top: 80px;
 }
 
 /* button */
