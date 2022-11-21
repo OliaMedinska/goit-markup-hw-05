@@ -489,8 +489,12 @@ margin-bottom: 10px;
     position: relative;
 }
 
+.photos{
+    position: relative;
+}
+
 .photos::after{
-    content: "ДЕСКТОПНІ ДОДАТКИ";
+    content: "";
     color: var(--second-text-color);
     font-style: normal;
     font-weight: 700;
@@ -508,15 +512,26 @@ margin-bottom: 10px;
     bottom: 0px;
 }
 
-.photos.photos-second::after{
-    content: "МОБІЛЬНІ ДОДАТКИ";
-}
 
-.photos.photos-third::after{
-    content: "ДИЗАЙНЕРСЬКІ РІШЕННЯ";
-    padding: 27px 90px;
+.text-photo{
+    position: absolute;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
     align-items: center;
-    
+    color: var(--second-text-color);
+    margin-bottom: 27px;
+    margin-right: 107px;
+    margin-left: 107px;
+    margin-top: 251px;
+    z-index: 1;
+}
+.text-photo.third{
+    margin-right: 90px;
+    margin-left: 90px;
 }
 
 
@@ -824,6 +839,8 @@ a .portfolio-text{
     height: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms, visibility 250ms;
+    
 }
 
 .modal{
@@ -870,3 +887,14 @@ a .portfolio-text{
     margin-top: -14px;
     margin-left: -6px;
 }
+
+
+/* /*animacja*/
+:hover:focus {
+    transition-property: background-color color fill;
+    transition-duration: 3000ms;
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+} 
