@@ -990,7 +990,8 @@ a .portfolio-text{
     pointer-events: none;
 }
 
-.modal-close-button{
+
+/*.modal-close-button{
     display: flex;
     align-items: center;
     position: relative;
@@ -1002,8 +1003,8 @@ a .portfolio-text{
     height: 30px;
     border:0;
     background-color: var(--second-text-color);
+*/
 
-}
 
 .thumb > img{
     display: block;
