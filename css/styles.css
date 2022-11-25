@@ -159,6 +159,7 @@ ul {
     line-height: 1.14;
     text-decoration: none;
 
+    transition: color 250ms, background-color 250ms,fill 250ms;
 }
 
 .site-nav .link:hover, .site-nav .link:focus {
@@ -189,6 +190,8 @@ ul {
 
 .contact {
     text-decoration: none;
+
+    transition: color 250ms, background-color 250ms,fill 250ms;
 }
 
 .contact:hover, .contact:focus{
@@ -242,6 +245,8 @@ footer{
 .footer-contact {
     color: var(--second-text-color-footer);
     text-decoration: none;
+
+    transition: color 250ms, background-color 250ms, fill 250ms; 
 }
 
 .footer-contact:hover,
@@ -296,6 +301,8 @@ li.address-footer{
     text-decoration: none;
     line-height: 1.71;
     font-size: 14px;
+
+    transition: color 250ms, background-color 250ms, fill 250ms; 
     }
 .city:hover, .city:focus{
     color: var(--accent-text-color);
@@ -311,6 +318,8 @@ li.address-footer{
 .mail-number{
     color: var(--second-text-color-footer);
     text-decoration: none;
+
+    transition: color 250ms, background-color 250ms, fill 250ms; 
 }
 
 .mail-number:hover,
@@ -330,6 +339,10 @@ color: var(--second-text-color);
 }
 .social{
     background-color:var(--footer-background-icon);
+}
+
+.cards-img-icon .img-footer{
+    transition: color 250ms, background-color 250ms, fill 250ms; 
 }
 .cards-img-icon .img-footer:hover, 
 .cards-img-icon .img-footer:focus{
@@ -407,6 +420,8 @@ margin-top: 80px;
     letter-spacing: 0.06em;
     cursor: pointer;
     text-align: center;
+
+    transition: color 250ms, background-color 250ms,fill 250ms;
 }
 
 .button.primary:hover, .button.primary:focus {
@@ -584,6 +599,8 @@ li.card {
     
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    transition: box-shadow 250ms;
 }
 .card .images {
     margin-top: 0px;
@@ -630,6 +647,8 @@ align-items: center;
 width: 44px;
 height: 44px;
 border-radius: 50%;
+
+transition: color 250ms, background-color 250ms,fill 250ms;
 }
 
 .cards-img-icon:hover,
@@ -664,7 +683,7 @@ fill:var(--second-text-color);
     margin-top: 0;
     margin-bottom: 50px;
 }
-
+/*
 .header-decoration{
     position: relative;
 }
@@ -677,22 +696,47 @@ fill:var(--second-text-color);
     height: 4px;
     background-color: #2196F3;
     border-radius: 2px;
-}
+}*/
 
-.header-decoration-portfolio{
+.link-decoration{
     position: relative;
 }
-.header-decoration-portfolio::after{
-    position: absolute;
-    bottom: 0;
-    left: 93px;
+.link-decoration::after{
+     display: inline-block;
+     content: "";
+     width: 100%;
+     height: 4px;
+
+     position: absolute;
+     left: 0;
+     bottom: -1px;
+     background-color: var(--accent-text-color);
+     border-radius: 2px;
+}
+/*.link-decoration-first{
+ position: relative;
+}
+.link-decoration-first::after{
     content: "";
-    width: 78px;
+    display: block;
+    width: 100%;
     height: 4px;
-    background-color: #2196F3;
+    background-color: var(--accent-text-color);
     border-radius: 2px;
 }
 
+.link-decoration-second{
+    position: relative;
+}
+.link-decoration-second::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-text-color);
+    border-radius: 2px;
+}
+*/
 .clients-logoes{
     display: flex;
     flex-direction: row;
@@ -707,6 +751,8 @@ fill:var(--second-text-color);
     background-color: var(--second-text-color);
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
+
+    transition: color 250ms, background-color 250ms, fill 250ms, box-shadow 250ms; 
 }
 .clients-img:hover, .clients-img:focus{
     border: 1px solid var(--accent-text-color);
@@ -773,6 +819,8 @@ li.card-border:nth-child(9) {
     line-height: 1.62;
     letter-spacing: 0.03em;
     text-align: center;
+
+    transition: color 250ms, background-color 250ms, fill 250ms, box-shadow 250ms; 
 }
 
 .button .secondary:hover, .button .secondary:focus {
@@ -784,6 +832,10 @@ li.card-border:nth-child(9) {
 }
 
 /*img porfolio*/
+.portfolio-link{
+    transition: box-shadow 250ms;
+}
+
 .portfolio-link:hover, .portfolio-link:focus{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -794,10 +846,12 @@ li.card-border:nth-child(9) {
 }
 
 div.portfolio-card {
+    position: relative;
     padding-left: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
     border: 1px solid var(--card-border);
+    z-index: 2;
 }
 
 .cards-portfolio{
@@ -830,6 +884,42 @@ a .portfolio-text{
 }
 
 
+/*overlay*/
+.portfolio-cards-description{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 370px;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(0);
+    transition: transform 250ms;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.portfolio-describtion-text{
+    color: var(--second-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.portfolio-link:hover .portfolio-cards-description{
+    transform: translateY(-100%);
+    border-radius: 1px;
+    visibility: visible;
+}
+
+.portfolio-link{
+    position: relative;
+}
+
+
 /* modal*/
 .backdrop{
     position: fixed;
@@ -839,6 +929,7 @@ a .portfolio-text{
     height: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
+
     transition: opacity 250ms, visibility 250ms;
     
 }
@@ -856,6 +947,7 @@ a .portfolio-text{
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
 }
 
 .is-hidden {
@@ -876,6 +968,7 @@ a .portfolio-text{
     height: 30px;
     border:0;
     background-color: var(--second-text-color);
+
 }
 
 .thumb > img{
@@ -887,14 +980,3 @@ a .portfolio-text{
     margin-top: -14px;
     margin-left: -6px;
 }
-
-
-/* /*animacja*/
-:hover:focus {
-    transition-property: background-color color fill;
-    transition-duration: 3000ms;
-    transition-timing-function: cubic-bezier(0.4,
-            0,
-            0.2,
-            1);
-} 
