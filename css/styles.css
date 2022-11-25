@@ -919,6 +919,40 @@ a .portfolio-text{
     position: relative;
 }
 
+/*overlay*/
+.portfolio-cards-description{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 370px;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(0);
+    transition: transform 250ms;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.portfolio-describtion-text{
+    color: var(--second-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.portfolio-link:hover .portfolio-cards-description{
+    transform: translateY(-100%);
+    border-radius: 1px;
+    visibility: visible;
+}
+
+.portfolio-link{
+    position: relative;
+}
 
 /* modal*/
 .backdrop{
