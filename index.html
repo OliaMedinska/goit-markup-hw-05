@@ -410,11 +410,47 @@
 
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-close-button" type="button" data-modal-close>
-        <svg width="30" height="30" class="">
-            <use href="./images/icons.svg#icon-close"></use>
-        </svg>
+      <div class="modal-content">
+        <button class="modal-close-button" type="button" data-modal-close>
+            <svg width="18" height="18" class="close-button-decor">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
       </button>
+      <h2 class="modal-header">Залиште свої дані, ми вам передзвонимо</h2>
+
+      <form name="contact-form">
+        <label for="label-name" class="form-label">Ім'я</label>
+        <div class="form-control">
+            <input id="label-name" type="text" class="form-input">
+         <svg widht="18" height="18" class="form-icon">
+            <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+         </svg>
+        </div>
+
+        <label for="label-number" class="form-label">Телефон</label>
+        <div class="form-control">
+            <input id="label-number" type="text" class="form-input">
+         <svg widht="18" height="18" class="form-icon">
+            <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+         </svg>
+        </div>
+
+        <label for="label-email" class="form-label">Пошта</label>
+        <div class="form-control">
+            <input id="label-email" type="text" class="form-input">
+         <svg widht="18" height="18" class="form-icon">
+            <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+         </svg>
+        </div>
+
+        <label for="label-name" class="form-label">Коментар</label>
+        <div class="form-control">
+            <input id="label-name" type="text" class="form-input-comment">
+         <span class="form-comment">Введіть текст</span>
+        </div>
+      </form>
+      <button type="button" class="button primary">Відправити</button>
+      </div>
     </div>
 </div>
      
